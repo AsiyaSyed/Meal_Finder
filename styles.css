@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
 }
 .navbar {
     display: flex;
@@ -10,18 +12,6 @@ body {
     padding: 15px 20px;
     background: #ff9800;
     color: white;
-}
-.nav-left {
-    display: flex;
-    align-items: center;
-}
-.logo {
-    height: 40px;
-    margin-right: 10px;
-}
-.brand {
-    font-size: 20px;
-    font-weight: bold;
 }
 .hamburger {
     font-size: 30px;
@@ -32,33 +22,38 @@ body {
     top: 0;
     right: -350px;
     width: 350px;
-    height: 100%;
+    height: auto;
+    max-height: 80vh;
     background: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+    border-radius: 10px 0 0 10px;
+    z-index: 1100;
 }
-.menu {
-    padding: 20px;
+.menu-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
 }
-.close-btn {
-    font-size: 35px;
-    color: red;
+.close-menu {
+    font-size: 24px;
     cursor: pointer;
-    text-align: right;
 }
 .menu-list {
     list-style: none;
-    padding: 0;
-    margin-top: 20px;
+    padding: 20px;
+    margin: 0;
 }
 .menu-list li {
     padding: 15px;
     font-size: 18px;
     cursor: pointer;
-    transition: 0.3s;
     border-bottom: 2px solid #ddd;
-    margin: 5px;
+    transition: 0.3s;
     text-align: left;
+    padding-left: 15px;
 }
 .menu-list li:hover {
     color: red;
@@ -66,7 +61,72 @@ body {
 .menu-overlay.active {
     right: 0;
 }
-.menu-list li:last-child {
-    margin-bottom: 20px;
+.container {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background: url('https://media.istockphoto.com/id/871358704/photo/old-vintage-wooden-table-with-a-red-checkered-tablecloth-top-view-mockup.jpg?s=612x612&w=0&k=20&c=krgMHM0IRJ95m3Zb1_e4uyNXOM5GcMTg3Wt9Knpf8zI=') no-repeat center center/cover;
 }
-
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border-radius: 5px;
+}
+.search-icon {
+    width: 40px;
+    height: 40px;
+    background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.meal-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.meal-card {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.meal-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+.meal-name {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: orange;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+}

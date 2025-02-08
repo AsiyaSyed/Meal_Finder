@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Finder</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    
-  </head>
+</head>
 <body>
     <nav class="navbar">
         <div class="nav-left">
-            <img src="https://media.istockphoto.com/id/489250858/vector/orange-house-icon-with-cutlery.jpg?s=612x612&w=0&k=20&c=VSLS8tRwzMIt7fPmWMi-PWh9H8AThSCJTa7yw3ulihI=" alt="Meal Finder Logo" class="logo">
             <span class="brand">MEAL FINDER</span>
         </div>
         <div class="nav-right">
             <div class="hamburger" id="hamburger-menu">&#9776;</div>
         </div>
     </nav>
-    
     <div class="menu-overlay" id="menu-overlay">
-        <div class="menu">
-            <div class="close-btn" id="close-menu">&times;</div>
-            <ul class="menu-list" id="menu-list"></ul>
+        <div class="menu-header">
+            <span class="close-menu" id="close-menu">&times;</span>
+        </div>
+        <ul class="menu-list" id="menu-list"></ul>
+    </div>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="search-container">
+                <input type="text" placeholder="Search cuisines...">
+                <div class="search-icon">🔍</div>
+            </div>
+            <h1>PERSONALIZE YOUR EXPERIENCE</h1>
         </div>
     </div>
+    <section class="categories">
+        <div class="meal-container" id="meal-container"></div>
+    </section>
     <script src="app.js"></script>
-    </body>
+</body>
 </html>
-
