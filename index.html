@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Meal Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-left">
+            <span><img src="/logos/images/Screenshot 2025-02-09 175524.png" alt=""></span>
             <span class="brand">MEAL FINDER</span>
         </div>
         <div class="nav-right">
@@ -25,15 +27,24 @@
         <div class="overlay"></div>
         <div class="content">
             <div class="search-container">
-                <input type="text" placeholder="Search cuisines...">
-                <div class="search-icon">🔍</div>
+                <input type="text" id="search-input" placeholder="Search recipes here...">
+                <div class="search-icon" id="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
-            <h1>PERSONALIZE YOUR EXPERIENCE</h1>
+            <h1>What are your favorite cuisines?</h1>
+            <p style="font-size:16px ;">PERSONALIZE YOUR EXPERIANCE </p>                                 
         </div>
     </div>
+    <section id="category-details"></section>
+    <div id="meal-details-section" style="display: none;"></div>
+
+
     <section class="categories">
+        <h2 id="categories-heading">Categories</h2>
         <div class="meal-container" id="meal-container"></div>
     </section>
-    <script src="app.js"></script>
+    
+
 </body>
 </html>
